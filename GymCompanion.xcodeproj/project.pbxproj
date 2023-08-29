@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		BF1A4BF92A9BCC9E00A921AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A4BF82A9BCC9E00A921AF /* AppDelegate.swift */; };
 		BF1A4BFB2A9BCC9E00A921AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A4BFA2A9BCC9E00A921AF /* SceneDelegate.swift */; };
-		BF1A4BFD2A9BCC9E00A921AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A4BFC2A9BCC9E00A921AF /* ViewController.swift */; };
 		BF1A4C032A9BCC9E00A921AF /* GymCompanion.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF1A4C012A9BCC9E00A921AF /* GymCompanion.xcdatamodeld */; };
 		BF1A4C052A9BCC9F00A921AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF1A4C042A9BCC9F00A921AF /* Assets.xcassets */; };
 		BF1A4C082A9BCC9F00A921AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF1A4C062A9BCC9F00A921AF /* LaunchScreen.storyboard */; };
 		BF1A4C132A9BCC9F00A921AF /* GymCompanionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A4C122A9BCC9F00A921AF /* GymCompanionTests.swift */; };
 		BF1A4C1D2A9BCC9F00A921AF /* GymCompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A4C1C2A9BCC9F00A921AF /* GymCompanionUITests.swift */; };
 		BF1A4C1F2A9BCC9F00A921AF /* GymCompanionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A4C1E2A9BCC9F00A921AF /* GymCompanionUITestsLaunchTests.swift */; };
+		BF9FE0EA2A9E6641003CCB1A /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE0E92A9E6641003CCB1A /* MainTabBarViewController.swift */; };
+		BF9FE0EC2A9E682D003CCB1A /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE0EB2A9E682D003CCB1A /* ExploreViewController.swift */; };
+		BF9FE0EE2A9E6872003CCB1A /* MyRoutinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE0ED2A9E6872003CCB1A /* MyRoutinesViewController.swift */; };
+		BF9FE0F02A9E6999003CCB1A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE0EF2A9E6999003CCB1A /* SettingsViewController.swift */; };
+		BF9FE0F22A9E6D64003CCB1A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE0F12A9E6D64003CCB1A /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +43,6 @@
 		BF1A4BF52A9BCC9E00A921AF /* GymCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF1A4BF82A9BCC9E00A921AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF1A4BFA2A9BCC9E00A921AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BF1A4BFC2A9BCC9E00A921AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BF1A4C022A9BCC9E00A921AF /* GymCompanion.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GymCompanion.xcdatamodel; sourceTree = "<group>"; };
 		BF1A4C042A9BCC9F00A921AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF1A4C072A9BCC9F00A921AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +52,11 @@
 		BF1A4C182A9BCC9F00A921AF /* GymCompanionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GymCompanionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF1A4C1C2A9BCC9F00A921AF /* GymCompanionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymCompanionUITests.swift; sourceTree = "<group>"; };
 		BF1A4C1E2A9BCC9F00A921AF /* GymCompanionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymCompanionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BF9FE0E92A9E6641003CCB1A /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		BF9FE0EB2A9E682D003CCB1A /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		BF9FE0ED2A9E6872003CCB1A /* MyRoutinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRoutinesViewController.swift; sourceTree = "<group>"; };
+		BF9FE0EF2A9E6999003CCB1A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		BF9FE0F12A9E6D64003CCB1A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +107,8 @@
 		BF1A4BF72A9BCC9E00A921AF /* GymCompanion */ = {
 			isa = PBXGroup;
 			children = (
-				BF1A4BF82A9BCC9E00A921AF /* AppDelegate.swift */,
-				BF1A4BFA2A9BCC9E00A921AF /* SceneDelegate.swift */,
-				BF1A4BFC2A9BCC9E00A921AF /* ViewController.swift */,
+				BF9FE0E72A9E658B003CCB1A /* Controllers */,
+				BF9FE0E62A9E656C003CCB1A /* Resources */,
 				BF1A4C042A9BCC9F00A921AF /* Assets.xcassets */,
 				BF1A4C062A9BCC9F00A921AF /* LaunchScreen.storyboard */,
 				BF1A4C092A9BCC9F00A921AF /* Info.plist */,
@@ -125,6 +132,35 @@
 				BF1A4C1E2A9BCC9F00A921AF /* GymCompanionUITestsLaunchTests.swift */,
 			);
 			path = GymCompanionUITests;
+			sourceTree = "<group>";
+		};
+		BF9FE0E62A9E656C003CCB1A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BF1A4BF82A9BCC9E00A921AF /* AppDelegate.swift */,
+				BF1A4BFA2A9BCC9E00A921AF /* SceneDelegate.swift */,
+				BF9FE0F12A9E6D64003CCB1A /* Constants.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BF9FE0E72A9E658B003CCB1A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF9FE0E82A9E65DB003CCB1A /* Core */,
+				BF9FE0EB2A9E682D003CCB1A /* ExploreViewController.swift */,
+				BF9FE0ED2A9E6872003CCB1A /* MyRoutinesViewController.swift */,
+				BF9FE0EF2A9E6999003CCB1A /* SettingsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BF9FE0E82A9E65DB003CCB1A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BF9FE0E92A9E6641003CCB1A /* MainTabBarViewController.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,10 +293,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF1A4BFD2A9BCC9E00A921AF /* ViewController.swift in Sources */,
 				BF1A4BF92A9BCC9E00A921AF /* AppDelegate.swift in Sources */,
+				BF9FE0EA2A9E6641003CCB1A /* MainTabBarViewController.swift in Sources */,
+				BF9FE0F02A9E6999003CCB1A /* SettingsViewController.swift in Sources */,
+				BF9FE0EC2A9E682D003CCB1A /* ExploreViewController.swift in Sources */,
+				BF9FE0EE2A9E6872003CCB1A /* MyRoutinesViewController.swift in Sources */,
 				BF1A4C032A9BCC9E00A921AF /* GymCompanion.xcdatamodeld in Sources */,
 				BF1A4BFB2A9BCC9E00A921AF /* SceneDelegate.swift in Sources */,
+				BF9FE0F22A9E6D64003CCB1A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
