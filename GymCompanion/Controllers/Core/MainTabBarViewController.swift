@@ -11,8 +11,7 @@ class MainTabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-         tabBar.tintColor = .red
-        tabBar.unselectedItemTintColor = .label
+        tabBar.tintColor = UIColor(named: "Charcoal")
 
         // My Routines
         let vc1 = UINavigationController(rootViewController: MyRoutinesViewController())

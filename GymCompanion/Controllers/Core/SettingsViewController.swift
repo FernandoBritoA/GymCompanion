@@ -1,5 +1,5 @@
 //
-//  MyRoutinesViewController.swift
+//  SettingsViewController.swift
 //  GymCompanion
 //
 //  Created by Fernando Brito on 29/08/23.
@@ -7,8 +7,10 @@
 
 import UIKit
 
-class MyRoutinesViewController: UIViewController {
+class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        view.backgroundColor = .systemBackground
     }
 }

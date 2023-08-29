@@ -148,9 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				BF9FE0E82A9E65DB003CCB1A /* Core */,
-				BF9FE0EB2A9E682D003CCB1A /* ExploreViewController.swift */,
-				BF9FE0ED2A9E6872003CCB1A /* MyRoutinesViewController.swift */,
-				BF9FE0EF2A9E6999003CCB1A /* SettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -159,6 +156,9 @@
 			isa = PBXGroup;
 			children = (
 				BF9FE0E92A9E6641003CCB1A /* MainTabBarViewController.swift */,
+				BF9FE0EB2A9E682D003CCB1A /* ExploreViewController.swift */,
+				BF9FE0ED2A9E6872003CCB1A /* MyRoutinesViewController.swift */,
+				BF9FE0EF2A9E6999003CCB1A /* SettingsViewController.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
