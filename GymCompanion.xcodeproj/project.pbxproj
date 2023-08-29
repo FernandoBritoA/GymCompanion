@@ -20,6 +20,7 @@
 		BF9FE0EE2A9E6872003CCB1A /* MyRoutinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE0ED2A9E6872003CCB1A /* MyRoutinesViewController.swift */; };
 		BF9FE0F02A9E6999003CCB1A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE0EF2A9E6999003CCB1A /* SettingsViewController.swift */; };
 		BF9FE0F22A9E6D64003CCB1A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE0F12A9E6D64003CCB1A /* Constants.swift */; };
+		BF9FE0F52A9E97BC003CCB1A /* Muscle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE0F42A9E97BC003CCB1A /* Muscle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		BF9FE0ED2A9E6872003CCB1A /* MyRoutinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRoutinesViewController.swift; sourceTree = "<group>"; };
 		BF9FE0EF2A9E6999003CCB1A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BF9FE0F12A9E6D64003CCB1A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BF9FE0F42A9E97BC003CCB1A /* Muscle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Muscle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		BF1A4BF72A9BCC9E00A921AF /* GymCompanion */ = {
 			isa = PBXGroup;
 			children = (
+				BF9FE0F32A9E976E003CCB1A /* Models */,
 				BF9FE0E72A9E658B003CCB1A /* Controllers */,
 				BF9FE0E62A9E656C003CCB1A /* Resources */,
 				BF1A4C042A9BCC9F00A921AF /* Assets.xcassets */,
@@ -161,6 +164,14 @@
 				BF9FE0EF2A9E6999003CCB1A /* SettingsViewController.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		BF9FE0F32A9E976E003CCB1A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BF9FE0F42A9E97BC003CCB1A /* Muscle.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9FE0F52A9E97BC003CCB1A /* Muscle.swift in Sources */,
 				BF1A4BF92A9BCC9E00A921AF /* AppDelegate.swift in Sources */,
 				BF9FE0EA2A9E6641003CCB1A /* MainTabBarViewController.swift in Sources */,
 				BF9FE0F02A9E6999003CCB1A /* SettingsViewController.swift in Sources */,
