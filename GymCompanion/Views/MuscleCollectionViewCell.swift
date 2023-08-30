@@ -35,6 +35,7 @@ class MuscleCollectionViewCell: UICollectionViewCell {
 
         contentView.addSubview(muscleImageView)
         muscleImageView.frame = contentView.bounds
+        muscleImageView.addColorLayer(with: CGColor(gray: 0.2, alpha: 0.5))
 
         contentView.addSubview(muscleLabel)
         muscleLabel.frame = contentView.bounds
