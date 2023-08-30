@@ -8,24 +8,16 @@
 import UIKit
 
 class ExploreViewController: UIViewController {
-    private let muscleArr: [MusclePreview] = [
-        MusclePreview(group: .abdominals),
-        MusclePreview(group: .abductors),
-        MusclePreview(group: .adductors),
-        MusclePreview(group: .biceps),
-        MusclePreview(group: .calves),
-        MusclePreview(group: .chest),
-        MusclePreview(group: .forearms),
-        MusclePreview(group: .glutes),
-        MusclePreview(group: .hamstrings),
-        MusclePreview(group: .lats),
-        MusclePreview(group: .lowerBack),
-        MusclePreview(group: .middleBack),
-        MusclePreview(group: .neck),
-        MusclePreview(group: .quadriceps),
-        MusclePreview(group: .traps),
-        MusclePreview(group: .triceps),
-    ]
+    private var exploreViewModel = ExploreViewModel()
+
+    private let searchController: UISearchController = {
+        let searchController = UISearchController(searchResultsController: nil)
+
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = K.Explore.searchPlaceholder
+
+        return searchController
+    }()
 
     private let muscleCollectionView: UICollectionView = {
         let spacing = K.Dimensions.spacing
@@ -49,9 +41,12 @@ class ExploreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.title = K.Explore.title
         view.backgroundColor = .systemBackground
+        navigationController?.navigationBar.prefersLargeTitles = true
 
         addCollectionView()
+        addSearchController()
     }
 
     private func addCollectionView() {
@@ -61,11 +56,16 @@ class ExploreViewController: UIViewController {
         muscleCollectionView.dataSource = self
         muscleCollectionView.frame = view.bounds
     }
+
+    private func addSearchController() {
+        searchController.searchResultsUpdater = self
+        navigationItem.searchController = searchController
+    }
 }
 
 extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return muscleArr.count
+        return exploreViewModel.results.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -73,9 +73,18 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataS
             return UICollectionViewCell()
         }
 
-        let muscle = muscleArr[indexPath.row]
+        let muscle = exploreViewModel.results[indexPath.row]
         cell.configure(with: muscle)
 
         return cell
+    }
+}
+
+extension ExploreViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else { return }
+
+        exploreViewModel.onChangeText(newText: text)
+        muscleCollectionView.reloadData()
     }
 }

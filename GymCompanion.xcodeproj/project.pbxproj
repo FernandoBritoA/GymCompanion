@@ -23,6 +23,7 @@
 		BF9FE0F52A9E97BC003CCB1A /* Muscle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE0F42A9E97BC003CCB1A /* Muscle.swift */; };
 		BF9FE0F82A9EE876003CCB1A /* MuscleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE0F72A9EE876003CCB1A /* MuscleCollectionViewCell.swift */; };
 		BF9FE0FE2A9F9FBC003CCB1A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE0FD2A9F9FBC003CCB1A /* Extensions.swift */; };
+		BF9FE1022A9FFAF4003CCB1A /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE1012A9FFAF4003CCB1A /* ExploreViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		BF9FE0F42A9E97BC003CCB1A /* Muscle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Muscle.swift; sourceTree = "<group>"; };
 		BF9FE0F72A9EE876003CCB1A /* MuscleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleCollectionViewCell.swift; sourceTree = "<group>"; };
 		BF9FE0FD2A9F9FBC003CCB1A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BF9FE1012A9FFAF4003CCB1A /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				BF9FE0E72A9E658B003CCB1A /* Controllers */,
 				BF9FE0F32A9E976E003CCB1A /* Models */,
 				BF9FE0F62A9EE850003CCB1A /* Views */,
+				BF9FE1002A9FFA95003CCB1A /* ViewModels */,
 				BF9FE0E62A9E656C003CCB1A /* Resources */,
 				BF1A4C042A9BCC9F00A921AF /* Assets.xcassets */,
 				BF1A4C062A9BCC9F00A921AF /* LaunchScreen.storyboard */,
@@ -186,6 +189,14 @@
 				BF9FE0F72A9EE876003CCB1A /* MuscleCollectionViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BF9FE1002A9FFA95003CCB1A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BF9FE1012A9FFAF4003CCB1A /* ExploreViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9FE1022A9FFAF4003CCB1A /* ExploreViewModel.swift in Sources */,
 				BF9FE0F52A9E97BC003CCB1A /* Muscle.swift in Sources */,
 				BF1A4BF92A9BCC9E00A921AF /* AppDelegate.swift in Sources */,
 				BF9FE0EA2A9E6641003CCB1A /* MainTabBarViewController.swift in Sources */,

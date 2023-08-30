@@ -19,6 +19,7 @@ struct K {
 
     enum Explore {
         static let title = "Explore"
+        static let searchPlaceholder = "Filter muscle groups"
         static let cvCellId = "ExploreCollectionViewCellId"
     }
 
