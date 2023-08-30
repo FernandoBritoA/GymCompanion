@@ -8,6 +8,25 @@
 import UIKit
 
 class ExploreViewController: UIViewController {
+    private let muscleArr: [MusclePreview] = [
+        MusclePreview(group: .abdominals),
+        MusclePreview(group: .abductors),
+        MusclePreview(group: .adductors),
+        MusclePreview(group: .biceps),
+        MusclePreview(group: .calves),
+        MusclePreview(group: .chest),
+        MusclePreview(group: .forearms),
+        MusclePreview(group: .glutes),
+        MusclePreview(group: .hamstrings),
+        MusclePreview(group: .lats),
+        MusclePreview(group: .lowerBack),
+        MusclePreview(group: .middleBack),
+        MusclePreview(group: .neck),
+        MusclePreview(group: .quadriceps),
+        MusclePreview(group: .traps),
+        MusclePreview(group: .triceps),
+    ]
+
     private let muscleCollectionView: UICollectionView = {
         let spacing = K.Dimensions.spacing
         let squareDimension = (K.Dimensions.screenWidth - spacing * 3) / 2

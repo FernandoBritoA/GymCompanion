@@ -14,6 +14,7 @@ class MuscleCollectionViewCell: UICollectionViewCell {
         let imageView = UIImageView()
 
         imageView.clipsToBounds = true
+        imageView.backgroundColor = .lightGray
         imageView.contentMode = .scaleAspectFill
 
         return imageView
@@ -32,13 +33,11 @@ class MuscleCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        contentView.backgroundColor = .gray
-
         contentView.addSubview(muscleImageView)
-        muscleImageView.frame = frame
+        muscleImageView.frame = contentView.bounds
 
         contentView.addSubview(muscleLabel)
-        muscleLabel.frame = frame
+        muscleLabel.frame = contentView.bounds
     }
 
     required init?(coder: NSCoder) {
