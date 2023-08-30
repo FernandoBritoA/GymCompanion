@@ -5,15 +5,21 @@
 //  Created by Fernando Brito on 29/08/23.
 //
 
-import Foundation
+import UIKit
 
 struct K {
+    enum Dimensions {
+        static let spacing = 20.0
+        static let screenWidth = UIScreen.main.bounds.width
+    }
+
     enum MyRoutines {
         static let title = "My Routines"
     }
 
     enum Explore {
         static let title = "Explore"
+        static let cvCellId = "ExploreCollectionViewCellId"
     }
 
     enum Settings {

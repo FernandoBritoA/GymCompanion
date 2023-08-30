@@ -28,6 +28,7 @@ enum MuscleGroup: String {
 
 struct MusclePreview {
     var group: MuscleGroup
+    var imageName: String
 
     var title: String {
         var result = ""
@@ -40,45 +41,9 @@ struct MusclePreview {
         return result
     }
 
-    var imageName: String {
-        switch group {
-            case .abdominals:
-                return ""
-            case .abductors:
-                return ""
-            case .adductors:
-                return ""
-            case .biceps:
-                return ""
-            case .calves:
-                return ""
-            case .chest:
-                return ""
-            case .forearms:
-                return ""
-            case .glutes:
-                return ""
-            case .hamstrings:
-                return ""
-            case .lats:
-                return ""
-            case .lowerBack:
-                return ""
-            case .middleBack:
-                return ""
-            case .neck:
-                return ""
-            case .quadriceps:
-                return ""
-            case .traps:
-                return ""
-            case .triceps:
-                return ""
-        }
-    }
-
     init(group: MuscleGroup) {
         self.group = group
+        self.imageName = group.rawValue
     }
 }
 
