@@ -7,10 +7,6 @@
 
 import Foundation
 
-struct Constants {
-    static let API_KEY = ""
-}
-
 enum APIError: Error {
     case invalidURL
     case failedToGetData
@@ -28,7 +24,7 @@ struct ApiCaller {
         }
 
         var request = URLRequest(url: url)
-        request.setValue(Constants.API_KEY, forHTTPHeaderField: "X-Api-Key")
+        request.setValue(ProcessInfo.processInfo.environment["API_KEY"], forHTTPHeaderField: "X-Api-Key")
 
         let (data, response) = try await URLSession.shared.data(for: request)
 

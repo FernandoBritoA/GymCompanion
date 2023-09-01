@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Difficulty: String {
+enum Difficulty: String, Decodable {
     case beginner
     case intermediate
     case expert
@@ -17,6 +17,6 @@ struct Exercise: Decodable {
     let name: String
     let muscle: String
     let equipment: String
-    let difficulty: String
+    let difficulty: Difficulty
     let instructions: String
 }

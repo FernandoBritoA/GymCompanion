@@ -26,6 +26,8 @@
 		BF9FE1022A9FFAF4003CCB1A /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE1012A9FFAF4003CCB1A /* ExploreViewModel.swift */; };
 		BF9FE1042AA27032003CCB1A /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE1032AA27032003CCB1A /* Exercise.swift */; };
 		BF9FE1072AA272DF003CCB1A /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE1062AA272DF003CCB1A /* ApiCaller.swift */; };
+		BF9FE10A2AA2797D003CCB1A /* ExerciseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE1092AA2797D003CCB1A /* ExerciseTableViewController.swift */; };
+		BF9FE10C2AA28FA2003CCB1A /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE10B2AA28FA2003CCB1A /* ExerciseTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		BF9FE1012A9FFAF4003CCB1A /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
 		BF9FE1032AA27032003CCB1A /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		BF9FE1062AA272DF003CCB1A /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
+		BF9FE1092AA2797D003CCB1A /* ExerciseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewController.swift; sourceTree = "<group>"; };
+		BF9FE10B2AA28FA2003CCB1A /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,7 @@
 		BF9FE0E72A9E658B003CCB1A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BF9FE1082AA2795C003CCB1A /* General */,
 				BF9FE0E82A9E65DB003CCB1A /* Core */,
 			);
 			path = Controllers;
@@ -193,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				BF9FE0F72A9EE876003CCB1A /* MuscleCollectionViewCell.swift */,
+				BF9FE10B2AA28FA2003CCB1A /* ExerciseTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -211,6 +217,14 @@
 				BF9FE1062AA272DF003CCB1A /* ApiCaller.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		BF9FE1082AA2795C003CCB1A /* General */ = {
+			isa = PBXGroup;
+			children = (
+				BF9FE1092AA2797D003CCB1A /* ExerciseTableViewController.swift */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF9FE1022A9FFAF4003CCB1A /* ExploreViewModel.swift in Sources */,
+				BF9FE10C2AA28FA2003CCB1A /* ExerciseTableViewCell.swift in Sources */,
 				BF9FE0F52A9E97BC003CCB1A /* Muscle.swift in Sources */,
 				BF1A4BF92A9BCC9E00A921AF /* AppDelegate.swift in Sources */,
 				BF9FE0EA2A9E6641003CCB1A /* MainTabBarViewController.swift in Sources */,
@@ -352,6 +367,7 @@
 				BF9FE0EE2A9E6872003CCB1A /* MyRoutinesViewController.swift in Sources */,
 				BF1A4C032A9BCC9E00A921AF /* GymCompanion.xcdatamodeld in Sources */,
 				BF9FE0FE2A9F9FBC003CCB1A /* Extensions.swift in Sources */,
+				BF9FE10A2AA2797D003CCB1A /* ExerciseTableViewController.swift in Sources */,
 				BF9FE1072AA272DF003CCB1A /* ApiCaller.swift in Sources */,
 				BF9FE1042AA27032003CCB1A /* Exercise.swift in Sources */,
 				BF1A4BFB2A9BCC9E00A921AF /* SceneDelegate.swift in Sources */,
