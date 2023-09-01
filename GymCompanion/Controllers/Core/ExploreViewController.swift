@@ -73,10 +73,23 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataS
             return UICollectionViewCell()
         }
 
-        let muscle = exploreViewModel.results[indexPath.row]
+        let muscle = exploreViewModel.getMuscle(by: indexPath)
         cell.configure(with: muscle)
 
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let muscle = exploreViewModel.getMuscle(by: indexPath)
+
+        Task {
+            do {
+                let exercises = try await ApiCaller.shared.getExercises(by: muscle.group)
+                print(exercises)
+            } catch {
+                print(error)
+            }
+        }
     }
 }
 

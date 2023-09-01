@@ -24,6 +24,8 @@
 		BF9FE0F82A9EE876003CCB1A /* MuscleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE0F72A9EE876003CCB1A /* MuscleCollectionViewCell.swift */; };
 		BF9FE0FE2A9F9FBC003CCB1A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE0FD2A9F9FBC003CCB1A /* Extensions.swift */; };
 		BF9FE1022A9FFAF4003CCB1A /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE1012A9FFAF4003CCB1A /* ExploreViewModel.swift */; };
+		BF9FE1042AA27032003CCB1A /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE1032AA27032003CCB1A /* Exercise.swift */; };
+		BF9FE1072AA272DF003CCB1A /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE1062AA272DF003CCB1A /* ApiCaller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		BF9FE0F72A9EE876003CCB1A /* MuscleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleCollectionViewCell.swift; sourceTree = "<group>"; };
 		BF9FE0FD2A9F9FBC003CCB1A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BF9FE1012A9FFAF4003CCB1A /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
+		BF9FE1032AA27032003CCB1A /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		BF9FE1062AA272DF003CCB1A /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 		BF1A4BF72A9BCC9E00A921AF /* GymCompanion */ = {
 			isa = PBXGroup;
 			children = (
+				BF9FE1052AA272C2003CCB1A /* Managers */,
 				BF9FE0E72A9E658B003CCB1A /* Controllers */,
 				BF9FE0F32A9E976E003CCB1A /* Models */,
 				BF9FE0F62A9EE850003CCB1A /* Views */,
@@ -179,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				BF9FE0F42A9E97BC003CCB1A /* Muscle.swift */,
+				BF9FE1032AA27032003CCB1A /* Exercise.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -197,6 +203,14 @@
 				BF9FE1012A9FFAF4003CCB1A /* ExploreViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BF9FE1052AA272C2003CCB1A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BF9FE1062AA272DF003CCB1A /* ApiCaller.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +352,8 @@
 				BF9FE0EE2A9E6872003CCB1A /* MyRoutinesViewController.swift in Sources */,
 				BF1A4C032A9BCC9E00A921AF /* GymCompanion.xcdatamodeld in Sources */,
 				BF9FE0FE2A9F9FBC003CCB1A /* Extensions.swift in Sources */,
+				BF9FE1072AA272DF003CCB1A /* ApiCaller.swift in Sources */,
+				BF9FE1042AA27032003CCB1A /* Exercise.swift in Sources */,
 				BF1A4BFB2A9BCC9E00A921AF /* SceneDelegate.swift in Sources */,
 				BF9FE0F22A9E6D64003CCB1A /* Constants.swift in Sources */,
 				BF9FE0F82A9EE876003CCB1A /* MuscleCollectionViewCell.swift in Sources */,

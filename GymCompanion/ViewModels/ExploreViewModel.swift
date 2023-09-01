@@ -42,4 +42,8 @@ struct ExploreViewModel {
     public mutating func onChangeText(newText: String) {
         searchText = newText
     }
+
+    public func getMuscle(by indexPath: IndexPath) -> MusclePreview {
+        return results[indexPath.row]
+    }
 }
