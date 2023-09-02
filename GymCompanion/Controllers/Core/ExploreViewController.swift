@@ -89,7 +89,7 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataS
                 case .success(let exerciseList):
                     DispatchQueue.main.async {
                         let vc = ExerciseTableViewController()
-                        vc.configure(with: exerciseList)
+                        vc.configure(with: exerciseList, title: muscle.title)
 
                         self?.navigationController?.pushViewController(vc, animated: true)
                     }

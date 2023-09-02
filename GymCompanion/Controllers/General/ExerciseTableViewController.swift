@@ -12,6 +12,9 @@ class ExerciseTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        hidesBottomBarWhenPushed = true
+        tableView.register(ExerciseTableViewCell.self, forCellReuseIdentifier: ExerciseTableViewCell.id)
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -33,8 +36,10 @@ class ExerciseTableViewController: UITableViewController {
         return cell
     }
 
-    public func configure(with exerciseList: [Exercise]) {
+    public func configure(with exerciseList: [Exercise], title: String) {
         exercises = exerciseList
+        navigationItem.title = title
         tableView.reloadData()
+        
     }
 }
