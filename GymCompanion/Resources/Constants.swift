@@ -26,4 +26,8 @@ struct K {
     enum Settings {
         static let title = "Settings"
     }
+
+    enum ExerciseList {
+        static let tvCellId = "ExerciseListTableViewCellId"
+    }
 }

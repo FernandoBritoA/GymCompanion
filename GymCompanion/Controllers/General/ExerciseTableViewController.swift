@@ -8,29 +8,33 @@
 import UIKit
 
 class ExerciseTableViewController: UITableViewController {
+    private var exercises: [Exercise] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return exercises.count
     }
 
-    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ExerciseTableViewCell.id) as? ExerciseTableViewCell else {
+            return UITableViewCell()
+        }
 
+        let currentExercise = exercises[indexPath.row]
+        cell.textLabel?.text = currentExercise.name
+
+        return cell
+    }
+
+    public func configure(with exerciseList: [Exercise]) {
+        exercises = exerciseList
+        tableView.reloadData()
+    }
 }

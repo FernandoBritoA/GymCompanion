@@ -8,6 +8,7 @@
 import UIKit
 
 class ExerciseTableViewCell: UITableViewCell {
+    static let id = K.ExerciseList.tvCellId
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,5 +20,4 @@ class ExerciseTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

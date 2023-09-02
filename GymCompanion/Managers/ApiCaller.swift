@@ -18,27 +18,33 @@ struct ApiCaller {
 
     private init() {}
 
-    public func getExercises(by muscleGroup: MuscleGroup) async throws -> [Exercise] {
+    private func isValidResponse(_ response: URLResponse) -> Bool {
+        let response = response as? HTTPURLResponse
+
+        return response?.statusCode == 200
+    }
+
+    public func getExercises(by muscleGroup: MuscleGroup) async -> Result<[Exercise], Error> {
         guard let url = URL(string: "https://api.api-ninjas.com/v1/exercises?muscle=\(muscleGroup)") else {
-            throw APIError.invalidURL
+            return .failure(APIError.invalidURL)
         }
 
         var request = URLRequest(url: url)
         request.setValue(ProcessInfo.processInfo.environment["API_KEY"], forHTTPHeaderField: "X-Api-Key")
 
-        let (data, response) = try await URLSession.shared.data(for: request)
-
-        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-            throw APIError.failedToGetData
-        }
-
         do {
+            let (data, response) = try await URLSession.shared.data(for: request)
+
+            guard isValidResponse(response) else {
+                return .failure(APIError.failedToGetData)
+            }
+
             let decoder = JSONDecoder()
             let result = try decoder.decode([Exercise].self, from: data)
 
-            return result
+            return .success(result)
         } catch {
-            throw APIError.failedToDecodeData
+            return .failure(error)
         }
     }
 }

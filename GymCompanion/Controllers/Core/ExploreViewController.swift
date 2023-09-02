@@ -82,12 +82,20 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let muscle = exploreViewModel.getMuscle(by: indexPath)
 
-        Task {
-            do {
-                let exercises = try await ApiCaller.shared.getExercises(by: muscle.group)
-                print(exercises)
-            } catch {
-                print(error)
+        Task { [weak self] in
+            let result = await ApiCaller.shared.getExercises(by: muscle.group)
+
+            switch result {
+                case .success(let exerciseList):
+                    DispatchQueue.main.async {
+                        let vc = ExerciseTableViewController()
+                        vc.configure(with: exerciseList)
+
+                        self?.navigationController?.pushViewController(vc, animated: true)
+                    }
+
+                case .failure(let error):
+                    print(error)
             }
         }
     }
