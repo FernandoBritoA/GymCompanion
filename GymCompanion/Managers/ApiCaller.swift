@@ -25,12 +25,12 @@ struct ApiCaller {
     }
 
     public func getExercises(by muscleGroup: MuscleGroup) async -> Result<[Exercise], Error> {
-        guard let url = URL(string: "https://api.api-ninjas.com/v1/exercises?muscle=\(muscleGroup)") else {
+        guard let url = URL(string: "https://exercisedb.p.rapidapi.com/exercises/target/\(muscleGroup.rawValue)") else {
             return .failure(APIError.invalidURL)
         }
 
         var request = URLRequest(url: url)
-        request.setValue(ProcessInfo.processInfo.environment["API_KEY"], forHTTPHeaderField: "X-Api-Key")
+        request.setValue(ProcessInfo.processInfo.environment["API_KEY"], forHTTPHeaderField: "X-RapidAPI-Key")
 
         do {
             let (data, response) = try await URLSession.shared.data(for: request)

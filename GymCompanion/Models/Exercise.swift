@@ -7,16 +7,11 @@
 
 import Foundation
 
-enum Difficulty: String, Decodable {
-    case beginner
-    case intermediate
-    case expert
-}
-
 struct Exercise: Decodable {
-    let name: String
-    let muscle: String
+    let bodyPart: String
     let equipment: String
-    let difficulty: Difficulty
-    let instructions: String
+    let gifUrl: String
+    let id: String
+    let name: String
+    let target: String
 }
