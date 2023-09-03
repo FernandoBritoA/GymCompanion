@@ -31,7 +31,7 @@ struct ExerciseListViewModel {
     }
 
     public mutating func onChangeText(newText: String) {
-        searchText = newText
+        searchText = newText.lowercased()
     }
 
     public func getExercise(by indexPath: IndexPath) -> Exercise {

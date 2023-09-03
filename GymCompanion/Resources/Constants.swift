@@ -29,5 +29,6 @@ struct K {
 
     enum ExerciseList {
         static let tvCellId = "ExerciseListTableViewCellId"
+        static let searchPlaceholder = "Filter exercises"
     }
 }

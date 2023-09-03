@@ -28,6 +28,7 @@
 		BF9FE1072AA272DF003CCB1A /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE1062AA272DF003CCB1A /* ApiCaller.swift */; };
 		BF9FE10A2AA2797D003CCB1A /* ExerciseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE1092AA2797D003CCB1A /* ExerciseTableViewController.swift */; };
 		BF9FE10E2AA42C45003CCB1A /* ExerciseListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE10D2AA42C45003CCB1A /* ExerciseListViewModel.swift */; };
+		BF9FE1102AA4300F003CCB1A /* ExerciseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE10F2AA4300F003CCB1A /* ExerciseDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		BF9FE1062AA272DF003CCB1A /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
 		BF9FE1092AA2797D003CCB1A /* ExerciseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewController.swift; sourceTree = "<group>"; };
 		BF9FE10D2AA42C45003CCB1A /* ExerciseListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListViewModel.swift; sourceTree = "<group>"; };
+		BF9FE10F2AA4300F003CCB1A /* ExerciseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				BF9FE1092AA2797D003CCB1A /* ExerciseTableViewController.swift */,
+				BF9FE10F2AA4300F003CCB1A /* ExerciseDetailViewController.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				BF9FE0FE2A9F9FBC003CCB1A /* Extensions.swift in Sources */,
 				BF9FE10A2AA2797D003CCB1A /* ExerciseTableViewController.swift in Sources */,
 				BF9FE1072AA272DF003CCB1A /* ApiCaller.swift in Sources */,
+				BF9FE1102AA4300F003CCB1A /* ExerciseDetailViewController.swift in Sources */,
 				BF9FE1042AA27032003CCB1A /* Exercise.swift in Sources */,
 				BF1A4BFB2A9BCC9E00A921AF /* SceneDelegate.swift in Sources */,
 				BF9FE0F22A9E6D64003CCB1A /* Constants.swift in Sources */,
