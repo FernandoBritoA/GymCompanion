@@ -8,20 +8,20 @@
 import UIKit
 
 enum MuscleGroup: String {
-    case abdominals
+    case abdominals = "abs"
     case abductors
     case adductors
+    case back = "upper%20back"
     case biceps
     case calves
-    case chest
+    case cardio
+    case chest = "pectorals"
+    case deltoids = "delts"
     case forearms
     case glutes
     case hamstrings
     case lats
-    case lowerBack = "lower_back"
-    case middleBack = "middle_back"
-    case neck
-    case quadriceps
+    case quadriceps = "quads"
     case traps
     case triceps
 }
@@ -29,20 +29,13 @@ enum MuscleGroup: String {
 struct MusclePreview {
     var group: MuscleGroup
     var imageName: String
-
-    var title: String {
-        var result = ""
-        let wordsArr = group.rawValue.split(separator: Character("_"))
-
-        for word in wordsArr {
-            result += "\(word.capitalized) "
-        }
-
-        return result
-    }
+    var title: String
 
     init(group: MuscleGroup) {
+        let groupText = "\(group)"
+
         self.group = group
-        self.imageName = group.rawValue
+        self.imageName = groupText
+        self.title = groupText.capitalized
     }
 }
