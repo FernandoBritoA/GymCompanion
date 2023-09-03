@@ -11,6 +11,11 @@ struct K {
     enum Dimensions {
         static let spacing = 20.0
         static let screenWidth = UIScreen.main.bounds.width
+        static let screenHeigth = UIScreen.main.bounds.height
+    }
+
+    enum Colors {
+        static let Charcoal = "Charcoal"
     }
 
     enum MyRoutines {
