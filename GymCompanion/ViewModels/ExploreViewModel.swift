@@ -39,6 +39,10 @@ struct ExploreViewModel {
         }
     }
 
+    public func getNumberOfRows() -> Int {
+        return results.count
+    }
+
     public mutating func onChangeText(newText: String) {
         searchText = newText
     }

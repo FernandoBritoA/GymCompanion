@@ -8,7 +8,7 @@
 import UIKit
 
 class ExerciseTableViewController: UITableViewController {
-    private var exercises: [Exercise] = []
+    private var viewModel = ExerciseListViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class ExerciseTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return exercises.count
+        return viewModel.getNumberOfRows()
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -30,16 +30,20 @@ class ExerciseTableViewController: UITableViewController {
             return UITableViewCell()
         }
 
-        let currentExercise = exercises[indexPath.row]
+        let currentExercise = viewModel.getExercise(by: indexPath)
         cell.textLabel?.text = currentExercise.name.capitalized
         cell.accessoryType = .disclosureIndicator
 
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+
     public func configure(with exerciseList: [Exercise], title: String) {
-        exercises = exerciseList
         navigationItem.title = title
+        viewModel.addExercises(exerciseList: exerciseList)
         tableView.reloadData()
     }
 }

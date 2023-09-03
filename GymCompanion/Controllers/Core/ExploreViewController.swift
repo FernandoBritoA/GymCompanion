@@ -8,7 +8,7 @@
 import UIKit
 
 class ExploreViewController: UIViewController {
-    private var exploreViewModel = ExploreViewModel()
+    private var viewModel = ExploreViewModel()
 
     private let searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
@@ -65,7 +65,7 @@ class ExploreViewController: UIViewController {
 
 extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return exploreViewModel.results.count
+        return viewModel.getNumberOfRows()
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -73,14 +73,14 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataS
             return UICollectionViewCell()
         }
 
-        let muscle = exploreViewModel.getMuscle(by: indexPath)
+        let muscle = viewModel.getMuscle(by: indexPath)
         cell.configure(with: muscle)
 
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let muscle = exploreViewModel.getMuscle(by: indexPath)
+        let muscle = viewModel.getMuscle(by: indexPath)
 
         let exerciseList = [
             Exercise(bodyPart: "back", equipment: "stability ball", gifUrl: "https://api.exercisedb.io/image/tguZB-Omyct6gb", id: "1314", name: "back extention and exercise ball", target: "spine"),
@@ -114,7 +114,7 @@ extension ExploreViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text else { return }
 
-        exploreViewModel.onChangeText(newText: text)
+        viewModel.onChangeText(newText: text)
         muscleCollectionView.reloadData()
     }
 }
