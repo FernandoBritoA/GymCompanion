@@ -53,10 +53,21 @@ class ExerciseTableViewController: UITableViewController {
 
         let exercise = viewModel.getExercise(by: indexPath)
 
+        showBottomSheet(with: exercise)
+    }
+
+    private func showBottomSheet(with exercise: Exercise) {
         let vc = ExerciseDetailViewController()
         vc.configure(with: exercise)
 
-        navigationController?.present(vc, animated: true)
+        let nav = UINavigationController(rootViewController: vc)
+
+        if let sheet = nav.sheetPresentationController {
+            sheet.detents = [.medium()]
+            sheet.prefersGrabberVisible = true
+        }
+
+        present(nav, animated: true)
     }
 
     public func configure(with exerciseList: [Exercise], title: String) {
