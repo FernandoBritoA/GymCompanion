@@ -82,22 +82,31 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let muscle = exploreViewModel.getMuscle(by: indexPath)
 
-        Task { [weak self] in
-            let result = await ApiCaller.shared.getExercises(by: muscle.group)
+        let exerciseList = [
+            Exercise(bodyPart: "back", equipment: "stability ball", gifUrl: "https://api.exercisedb.io/image/tguZB-Omyct6gb", id: "1314", name: "back extention and exercise ball", target: "spine"),
+            Exercise(bodyPart: "back", equipment: "band", gifUrl: "https://api.exercisedb.io/image/azq05Cqi1kvtEH", id: "1010", name: "band straight leg deadlift", target: "spine"),
+        ]
 
-            switch result {
-                case .success(let exerciseList):
-                    DispatchQueue.main.async {
-                        let vc = ExerciseTableViewController()
-                        vc.configure(with: exerciseList, title: muscle.title)
+        let vc = ExerciseTableViewController()
+        vc.configure(with: exerciseList, title: muscle.title)
 
-                        self?.navigationController?.pushViewController(vc, animated: true)
-                    }
-
-                case .failure(let error):
-                    print(error.localizedDescription)
-            }
-        }
+        navigationController?.pushViewController(vc, animated: true)
+        //                Task { [weak self] in
+//                    let result = await ApiCaller.shared.getExercises(by: muscle.group)
+//
+//                    switch result {
+//                        case .success(let exerciseList):
+//                            DispatchQueue.main.async {
+//                                let vc = ExerciseTableViewController()
+//                                vc.configure(with: exerciseList, title: muscle.title)
+//
+//                                self?.navigationController?.pushViewController(vc, animated: true)
+//                            }
+//
+//                        case .failure(let error):
+//                            print(error.localizedDescription)
+//                    }
+//                }
     }
 }
 

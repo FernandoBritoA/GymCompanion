@@ -14,7 +14,7 @@ class ExerciseTableViewController: UITableViewController {
         super.viewDidLoad()
 
         hidesBottomBarWhenPushed = true
-        tableView.register(ExerciseTableViewCell.self, forCellReuseIdentifier: ExerciseTableViewCell.id)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: K.ExerciseList.tvCellId)
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -26,12 +26,13 @@ class ExerciseTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ExerciseTableViewCell.id) as? ExerciseTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: K.ExerciseList.tvCellId) else {
             return UITableViewCell()
         }
 
         let currentExercise = exercises[indexPath.row]
-        cell.textLabel?.text = currentExercise.name
+        cell.textLabel?.text = currentExercise.name.capitalized
+        cell.accessoryType = .disclosureIndicator
 
         return cell
     }
@@ -40,6 +41,5 @@ class ExerciseTableViewController: UITableViewController {
         exercises = exerciseList
         navigationItem.title = title
         tableView.reloadData()
-        
     }
 }

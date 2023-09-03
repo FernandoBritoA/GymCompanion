@@ -27,7 +27,6 @@
 		BF9FE1042AA27032003CCB1A /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE1032AA27032003CCB1A /* Exercise.swift */; };
 		BF9FE1072AA272DF003CCB1A /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE1062AA272DF003CCB1A /* ApiCaller.swift */; };
 		BF9FE10A2AA2797D003CCB1A /* ExerciseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE1092AA2797D003CCB1A /* ExerciseTableViewController.swift */; };
-		BF9FE10C2AA28FA2003CCB1A /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE10B2AA28FA2003CCB1A /* ExerciseTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +71,6 @@
 		BF9FE1032AA27032003CCB1A /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		BF9FE1062AA272DF003CCB1A /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
 		BF9FE1092AA2797D003CCB1A /* ExerciseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewController.swift; sourceTree = "<group>"; };
-		BF9FE10B2AA28FA2003CCB1A /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,7 +196,6 @@
 			isa = PBXGroup;
 			children = (
 				BF9FE0F72A9EE876003CCB1A /* MuscleCollectionViewCell.swift */,
-				BF9FE10B2AA28FA2003CCB1A /* ExerciseTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -358,7 +355,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF9FE1022A9FFAF4003CCB1A /* ExploreViewModel.swift in Sources */,
-				BF9FE10C2AA28FA2003CCB1A /* ExerciseTableViewCell.swift in Sources */,
 				BF9FE0F52A9E97BC003CCB1A /* Muscle.swift in Sources */,
 				BF1A4BF92A9BCC9E00A921AF /* AppDelegate.swift in Sources */,
 				BF9FE0EA2A9E6641003CCB1A /* MainTabBarViewController.swift in Sources */,
