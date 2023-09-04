@@ -26,16 +26,33 @@ enum MuscleGroup: String {
     case triceps
 }
 
-struct MusclePreview {
+struct MusclePreview: NameFilter {
     var group: MuscleGroup
-    var imageName: String
-    var title: String
+    var name: String
 
     init(group: MuscleGroup) {
-        let groupText = "\(group)"
-
         self.group = group
-        self.imageName = groupText
-        self.title = groupText.capitalized
+        self.name = "\(group)"
     }
+}
+
+enum Muscles {
+    static let arr: [MusclePreview] = [
+        MusclePreview(group: .abdominals),
+        MusclePreview(group: .abductors),
+        MusclePreview(group: .adductors),
+        MusclePreview(group: .back),
+        MusclePreview(group: .biceps),
+        MusclePreview(group: .calves),
+        MusclePreview(group: .cardio),
+        MusclePreview(group: .chest),
+        MusclePreview(group: .deltoids),
+        MusclePreview(group: .forearms),
+        MusclePreview(group: .glutes),
+        MusclePreview(group: .hamstrings),
+        MusclePreview(group: .lats),
+        MusclePreview(group: .quadriceps),
+        MusclePreview(group: .traps),
+        MusclePreview(group: .triceps),
+    ]
 }

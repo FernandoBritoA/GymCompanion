@@ -53,7 +53,7 @@ class MuscleCollectionViewCell: UICollectionViewCell {
     }
 
     public func configure(with model: MusclePreview) {
-        muscleImageView.image = UIImage(named: model.imageName)
-        muscleLabel.text = model.title
+        muscleImageView.image = UIImage(named: model.name)
+        muscleLabel.text = model.name.capitalized
     }
 }

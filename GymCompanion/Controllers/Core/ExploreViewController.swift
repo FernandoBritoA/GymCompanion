@@ -8,7 +8,7 @@
 import UIKit
 
 class ExploreViewController: UIViewController {
-    private var viewModel = ExploreViewModel()
+    private var viewModel = SearchListViewModel<MusclePreview>(renderList: Muscles.arr)
 
     private let searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
@@ -73,14 +73,14 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataS
             return UICollectionViewCell()
         }
 
-        let muscle = viewModel.getMuscle(by: indexPath)
+        let muscle = viewModel.getElement(by: indexPath)
         cell.configure(with: muscle)
 
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let muscle = viewModel.getMuscle(by: indexPath)
+        let muscle = viewModel.getElement(by: indexPath)
 
         Task { [weak self] in
             let result = await ApiCaller.shared.getExercises(by: muscle.group)
@@ -89,7 +89,7 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataS
                 case .success(let exerciseList):
                     DispatchQueue.main.async {
                         let vc = ExerciseTableViewController()
-                        vc.configure(with: exerciseList, title: muscle.title)
+                        vc.configure(with: exerciseList, title: muscle.name.capitalized)
 
                         self?.navigationController?.pushViewController(vc, animated: true)
                     }
@@ -105,7 +105,7 @@ extension ExploreViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text else { return }
 
-        viewModel.onChangeText(newText: text)
+        viewModel.onChangeSearchText(searchText: text)
         muscleCollectionView.reloadData()
     }
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 class ExerciseTableViewController: UITableViewController {
-    private var viewModel = ExerciseListViewModel()
+    private var viewModel = SearchListViewModel<Exercise>()
 
     private let searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
@@ -41,7 +41,7 @@ class ExerciseTableViewController: UITableViewController {
             return UITableViewCell()
         }
 
-        let currentExercise = viewModel.getExercise(by: indexPath)
+        let currentExercise = viewModel.getElement(by: indexPath)
         cell.textLabel?.text = currentExercise.name.capitalized
         cell.accessoryType = .disclosureIndicator
 
@@ -51,7 +51,7 @@ class ExerciseTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-        let exercise = viewModel.getExercise(by: indexPath)
+        let exercise = viewModel.getElement(by: indexPath)
 
         showBottomSheet(with: exercise)
     }
@@ -72,7 +72,7 @@ class ExerciseTableViewController: UITableViewController {
 
     public func configure(with exerciseList: [Exercise], title: String) {
         navigationItem.title = title
-        viewModel.addExercises(exerciseList: exerciseList)
+        viewModel.addElements(exerciseList)
 
         tableView.reloadData()
     }
@@ -87,7 +87,7 @@ extension ExerciseTableViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text else { return }
 
-        viewModel.onChangeText(newText: text)
+        viewModel.onChangeSearchText(searchText: text)
 
         tableView.reloadData()
     }
