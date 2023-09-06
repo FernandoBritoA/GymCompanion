@@ -29,6 +29,10 @@ class ListViewModel<T> {
     public func getElement(by indexPath: IndexPath) -> T {
         return renderList[indexPath.row]
     }
+
+    public func removeElement(by indexPath: IndexPath) {
+        renderList.remove(at: indexPath.row)
+    }
 }
 
 class SearchListViewModel<T: NameFilter>: ListViewModel<T> {

@@ -50,8 +50,8 @@ class RoutineTableViewCell: UITableViewCell {
         let labelPadding = 10.0
 
         let imageViewConstraints = [
-            squaredImageView.widthAnchor.constraint(equalToConstant: imageSize),
-            squaredImageView.heightAnchor.constraint(equalToConstant: imageSize),
+            squaredImageView.widthAnchor.constraint(equalToConstant: imageSize).withPriority(999),
+            squaredImageView.heightAnchor.constraint(equalToConstant: imageSize).withPriority(999),
             squaredImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Dimensions.horizontalSpacing),
         ]
 

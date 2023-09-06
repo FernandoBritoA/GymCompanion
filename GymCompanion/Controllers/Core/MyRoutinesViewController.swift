@@ -34,7 +34,7 @@ class MyRoutinesViewController: UIViewController {
 extension MyRoutinesViewController: UITableViewDelegate, UITableViewDataSource {
     private func setupTableView() {
         let tableView = UITableView()
-
+        
         tableView.separatorStyle = .none
         tableView.register(RoutineTableViewCell.self, forCellReuseIdentifier: RoutineTableViewCell.id)
 
@@ -43,28 +43,37 @@ extension MyRoutinesViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.getNumberOfRows()
     }
-
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60.0
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: RoutineTableViewCell.id) as? RoutineTableViewCell else {
             return UITableViewCell()
         }
-
+        
         let routine = viewModel.getElement(by: indexPath)
         cell.configure(with: routine)
         cell.accessoryType = .disclosureIndicator
-
+        
         return cell
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            print("Deleted")
+            
+            viewModel.removeElement(by: indexPath)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
 }
