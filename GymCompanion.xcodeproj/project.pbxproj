@@ -16,6 +16,9 @@
 		BF1A4C1D2A9BCC9F00A921AF /* GymCompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A4C1C2A9BCC9F00A921AF /* GymCompanionUITests.swift */; };
 		BF1A4C1F2A9BCC9F00A921AF /* GymCompanionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A4C1E2A9BCC9F00A921AF /* GymCompanionUITestsLaunchTests.swift */; };
 		BF1CA9A92AA5457B00F679CA /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CA9A82AA5457B00F679CA /* ListViewModel.swift */; };
+		BF1CA9AB2AA5616500F679CA /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CA9AA2AA5616500F679CA /* Routine.swift */; };
+		BF1CA9AF2AA7BD2600F679CA /* RoutineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CA9AE2AA7BD2600F679CA /* RoutineTableViewCell.swift */; };
+		BF1CA9B12AA7C0AC00F679CA /* SquaredImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CA9B02AA7C0AC00F679CA /* SquaredImageView.swift */; };
 		BF9FE0EA2A9E6641003CCB1A /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE0E92A9E6641003CCB1A /* MainTabBarViewController.swift */; };
 		BF9FE0EC2A9E682D003CCB1A /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE0EB2A9E682D003CCB1A /* ExploreViewController.swift */; };
 		BF9FE0EE2A9E6872003CCB1A /* MyRoutinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE0ED2A9E6872003CCB1A /* MyRoutinesViewController.swift */; };
@@ -65,6 +68,9 @@
 		BF1A4C1C2A9BCC9F00A921AF /* GymCompanionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymCompanionUITests.swift; sourceTree = "<group>"; };
 		BF1A4C1E2A9BCC9F00A921AF /* GymCompanionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymCompanionUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BF1CA9A82AA5457B00F679CA /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		BF1CA9AA2AA5616500F679CA /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
+		BF1CA9AE2AA7BD2600F679CA /* RoutineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineTableViewCell.swift; sourceTree = "<group>"; };
+		BF1CA9B02AA7C0AC00F679CA /* SquaredImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquaredImageView.swift; sourceTree = "<group>"; };
 		BF9FE0E92A9E6641003CCB1A /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		BF9FE0EB2A9E682D003CCB1A /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		BF9FE0ED2A9E6872003CCB1A /* MyRoutinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRoutinesViewController.swift; sourceTree = "<group>"; };
@@ -205,6 +211,7 @@
 			children = (
 				BF9FE0F42A9E97BC003CCB1A /* Muscle.swift */,
 				BF9FE1032AA27032003CCB1A /* Exercise.swift */,
+				BF1CA9AA2AA5616500F679CA /* Routine.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -213,6 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				BF9FE0F72A9EE876003CCB1A /* MuscleCollectionViewCell.swift */,
+				BF1CA9AE2AA7BD2600F679CA /* RoutineTableViewCell.swift */,
+				BF1CA9B02AA7C0AC00F679CA /* SquaredImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -428,17 +437,20 @@
 				BF9FE0F52A9E97BC003CCB1A /* Muscle.swift in Sources */,
 				BF1A4BF92A9BCC9E00A921AF /* AppDelegate.swift in Sources */,
 				BF9FE0EA2A9E6641003CCB1A /* MainTabBarViewController.swift in Sources */,
+				BF1CA9AB2AA5616500F679CA /* Routine.swift in Sources */,
 				BF9FE0F02A9E6999003CCB1A /* SettingsViewController.swift in Sources */,
 				BF9FE0EC2A9E682D003CCB1A /* ExploreViewController.swift in Sources */,
 				BF9FE0EE2A9E6872003CCB1A /* MyRoutinesViewController.swift in Sources */,
 				BF1A4C032A9BCC9E00A921AF /* GymCompanion.xcdatamodeld in Sources */,
 				BF9FE0FE2A9F9FBC003CCB1A /* Extensions.swift in Sources */,
 				BF9FE10A2AA2797D003CCB1A /* ExerciseTableViewController.swift in Sources */,
+				BF1CA9AF2AA7BD2600F679CA /* RoutineTableViewCell.swift in Sources */,
 				BF9FE1072AA272DF003CCB1A /* ApiCaller.swift in Sources */,
 				BF9FE1102AA4300F003CCB1A /* ExerciseDetailViewController.swift in Sources */,
 				BF9FE1042AA27032003CCB1A /* Exercise.swift in Sources */,
 				BF1CA9A92AA5457B00F679CA /* ListViewModel.swift in Sources */,
 				BF1A4BFB2A9BCC9E00A921AF /* SceneDelegate.swift in Sources */,
+				BF1CA9B12AA7C0AC00F679CA /* SquaredImageView.swift in Sources */,
 				BF9FE0F22A9E6D64003CCB1A /* Constants.swift in Sources */,
 				BF9FE0F82A9EE876003CCB1A /* MuscleCollectionViewCell.swift in Sources */,
 			);

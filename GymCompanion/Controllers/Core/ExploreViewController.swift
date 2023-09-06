@@ -20,8 +20,8 @@ class ExploreViewController: UIViewController {
     }()
 
     private let muscleCollectionView: UICollectionView = {
-        let spacing = K.Dimensions.spacing
-        let squareDimension = (K.Dimensions.screenWidth - spacing * 3) / 2
+        let spacing = Dimensions.horizontalSpacing
+        let squareDimension = (Dimensions.screenWidth - spacing * 3) / 2
 
         let layout = UICollectionViewFlowLayout()
 

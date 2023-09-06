@@ -8,18 +8,12 @@
 import UIKit
 
 struct K {
-    enum Dimensions {
-        static let spacing = 20.0
-        static let screenWidth = UIScreen.main.bounds.width
-        static let screenHeigth = UIScreen.main.bounds.height
-    }
-
-    enum Colors {
-        static let Charcoal = "Charcoal"
-    }
-
     enum MyRoutines {
         static let title = "My Routines"
+
+        enum RoutineList {
+            static let tvCellId = "RoutineListTableViewCellId"
+        }
     }
 
     enum Explore {
@@ -36,4 +30,14 @@ struct K {
         static let tvCellId = "ExerciseListTableViewCellId"
         static let searchPlaceholder = "Filter exercises"
     }
+}
+
+enum Colors {
+    static let Charcoal = "Charcoal"
+}
+
+enum Dimensions {
+    static let horizontalSpacing = 20.0
+    static let screenWidth = UIScreen.main.bounds.width
+    static let screenHeigth = UIScreen.main.bounds.height
 }

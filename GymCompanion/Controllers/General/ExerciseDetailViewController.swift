@@ -14,7 +14,7 @@ class ExerciseDetailViewController: UIViewController {
 
         label.numberOfLines = 0
         label.font = .systemFont(ofSize: 24, weight: .bold)
-        label.textColor = UIColor(named: K.Colors.Charcoal)
+        label.textColor = UIColor(named: Colors.Charcoal)
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -45,7 +45,7 @@ class ExerciseDetailViewController: UIViewController {
             titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
         ]
 
-        let imageDimension = K.Dimensions.screenWidth / 1.5
+        let imageDimension = Dimensions.screenWidth / 1.5
 
         let gifImageViewConstraints = [
             gifImageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
