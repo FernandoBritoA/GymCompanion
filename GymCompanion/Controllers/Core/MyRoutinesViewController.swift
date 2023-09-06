@@ -9,12 +9,18 @@ import UIKit
 
 class MyRoutinesViewController: UIViewController {
     private var viewModel = ListViewModel<Routine>(renderList: [
-        Routine(name: "Balance", type: .balance),
-        Routine(name: "Core Training", type: .core),
-        Routine(name: "Functional Training", type: .functional),
-        Routine(name: "Mobility training", type: .mobility),
-        Routine(name: "Strength", type: .strength),
-        Routine(name: "Stretching", type: .stretching),
+        Routine(name: "Balance", type: .balance, exercises: [
+            RoutineExercise(
+                name: "Bicep curl",
+                gifUrl: "https://api.exercisedb.io/image/tguZB-Omyct6gb",
+                repetitions: 3,
+                weight: 20),
+        ]),
+        Routine(name: "Core Training", type: .core, exercises: []),
+        Routine(name: "Functional Training", type: .functional, exercises: []),
+        Routine(name: "Mobility training", type: .mobility, exercises: []),
+        Routine(name: "Strength", type: .strength, exercises: []),
+        Routine(name: "Stretching", type: .stretching, exercises: []),
     ])
 
     override func viewDidLoad() {
@@ -37,7 +43,7 @@ extension MyRoutinesViewController: UITableViewDelegate, UITableViewDataSource {
         
         tableView.separatorStyle = .none
         tableView.register(RoutineTableViewCell.self, forCellReuseIdentifier: RoutineTableViewCell.id)
-
+        tableView.estimatedRowHeight = 60.0
         view.addSubview(tableView)
         tableView.frame = view.bounds
         tableView.delegate = self

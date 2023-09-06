@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct Exercise: Decodable, NameFilter {
+protocol ExerciseDetail {
+    var name: String { get }
+    var gifUrl: String { get }
+}
+
+struct Exercise: Decodable, NameFilter, ExerciseDetail {
     let bodyPart: String
     let equipment: String
     let gifUrl: String

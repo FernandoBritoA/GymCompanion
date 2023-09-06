@@ -19,4 +19,12 @@ enum RoutineType: String {
 struct Routine {
     let name: String
     let type: RoutineType
+    let exercises: [RoutineExercise]
+}
+
+struct RoutineExercise: ExerciseDetail {
+    let name: String
+    let gifUrl: String
+    let repetitions: Int
+    let weight: Double
 }

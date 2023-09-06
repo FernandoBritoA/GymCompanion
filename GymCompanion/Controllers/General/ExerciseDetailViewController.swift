@@ -57,7 +57,7 @@ class ExerciseDetailViewController: UIViewController {
         NSLayoutConstraint.activate(titleLabelConstraints + gifImageViewConstraints)
     }
 
-    public func configure(with model: Exercise) {
+    public func configure(with model: ExerciseDetail) {
         guard let url = URL(string: model.gifUrl) else {
             return
         }
