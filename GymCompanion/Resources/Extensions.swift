@@ -24,3 +24,11 @@ extension NSLayoutConstraint {
         return self
     }
 }
+
+extension UIView {
+    func withHorizontalInsets() {
+        let insets = UIEdgeInsets(top: 0, left: Dimensions.horizontalSpacing, bottom: 0, right: Dimensions.horizontalSpacing)
+
+        self.frame = self.frame.inset(by: insets)
+    }
+}

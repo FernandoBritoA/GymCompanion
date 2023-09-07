@@ -19,6 +19,10 @@
 		BF1CA9AB2AA5616500F679CA /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CA9AA2AA5616500F679CA /* Routine.swift */; };
 		BF1CA9AF2AA7BD2600F679CA /* RoutineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CA9AE2AA7BD2600F679CA /* RoutineTableViewCell.swift */; };
 		BF1CA9B12AA7C0AC00F679CA /* SquaredImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CA9B02AA7C0AC00F679CA /* SquaredImageView.swift */; };
+		BF1CA9B32AA8E34B00F679CA /* RoutineExerciseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CA9B22AA8E34B00F679CA /* RoutineExerciseTableViewController.swift */; };
+		BF1CA9B52AA908ED00F679CA /* RoutineExerciseBreakdownStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CA9B42AA908ED00F679CA /* RoutineExerciseBreakdownStackView.swift */; };
+		BF1CA9B82AA90B4C00F679CA /* RoutineExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CA9B72AA90B4C00F679CA /* RoutineExerciseTableViewCell.swift */; };
+		BF1CA9BA2AA95B2900F679CA /* ExerciseColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CA9B92AA95B2900F679CA /* ExerciseColumnView.swift */; };
 		BF9FE0EA2A9E6641003CCB1A /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE0E92A9E6641003CCB1A /* MainTabBarViewController.swift */; };
 		BF9FE0EC2A9E682D003CCB1A /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE0EB2A9E682D003CCB1A /* ExploreViewController.swift */; };
 		BF9FE0EE2A9E6872003CCB1A /* MyRoutinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE0ED2A9E6872003CCB1A /* MyRoutinesViewController.swift */; };
@@ -71,6 +75,10 @@
 		BF1CA9AA2AA5616500F679CA /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
 		BF1CA9AE2AA7BD2600F679CA /* RoutineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineTableViewCell.swift; sourceTree = "<group>"; };
 		BF1CA9B02AA7C0AC00F679CA /* SquaredImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquaredImageView.swift; sourceTree = "<group>"; };
+		BF1CA9B22AA8E34B00F679CA /* RoutineExerciseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineExerciseTableViewController.swift; sourceTree = "<group>"; };
+		BF1CA9B42AA908ED00F679CA /* RoutineExerciseBreakdownStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineExerciseBreakdownStackView.swift; sourceTree = "<group>"; };
+		BF1CA9B72AA90B4C00F679CA /* RoutineExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineExerciseTableViewCell.swift; sourceTree = "<group>"; };
+		BF1CA9B92AA95B2900F679CA /* ExerciseColumnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseColumnView.swift; sourceTree = "<group>"; };
 		BF9FE0E92A9E6641003CCB1A /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		BF9FE0EB2A9E682D003CCB1A /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		BF9FE0ED2A9E6872003CCB1A /* MyRoutinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRoutinesViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +183,16 @@
 			path = GymCompanionUITests;
 			sourceTree = "<group>";
 		};
+		BF1CA9B62AA90B0900F679CA /* RoutineExerciseTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BF1CA9B42AA908ED00F679CA /* RoutineExerciseBreakdownStackView.swift */,
+				BF1CA9B72AA90B4C00F679CA /* RoutineExerciseTableViewCell.swift */,
+				BF1CA9B92AA95B2900F679CA /* ExerciseColumnView.swift */,
+			);
+			path = RoutineExerciseTableViewCell;
+			sourceTree = "<group>";
+		};
 		BF9FE0E62A9E656C003CCB1A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +237,7 @@
 		BF9FE0F62A9EE850003CCB1A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BF1CA9B62AA90B0900F679CA /* RoutineExerciseTableViewCell */,
 				BF9FE0F72A9EE876003CCB1A /* MuscleCollectionViewCell.swift */,
 				BF1CA9AE2AA7BD2600F679CA /* RoutineTableViewCell.swift */,
 				BF1CA9B02AA7C0AC00F679CA /* SquaredImageView.swift */,
@@ -247,6 +266,7 @@
 			children = (
 				BF9FE1092AA2797D003CCB1A /* ExerciseTableViewController.swift */,
 				BF9FE10F2AA4300F003CCB1A /* ExerciseDetailViewController.swift */,
+				BF1CA9B22AA8E34B00F679CA /* RoutineExerciseTableViewController.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -446,12 +466,16 @@
 				BF9FE10A2AA2797D003CCB1A /* ExerciseTableViewController.swift in Sources */,
 				BF1CA9AF2AA7BD2600F679CA /* RoutineTableViewCell.swift in Sources */,
 				BF9FE1072AA272DF003CCB1A /* ApiCaller.swift in Sources */,
+				BF1CA9B32AA8E34B00F679CA /* RoutineExerciseTableViewController.swift in Sources */,
 				BF9FE1102AA4300F003CCB1A /* ExerciseDetailViewController.swift in Sources */,
+				BF1CA9B52AA908ED00F679CA /* RoutineExerciseBreakdownStackView.swift in Sources */,
 				BF9FE1042AA27032003CCB1A /* Exercise.swift in Sources */,
 				BF1CA9A92AA5457B00F679CA /* ListViewModel.swift in Sources */,
 				BF1A4BFB2A9BCC9E00A921AF /* SceneDelegate.swift in Sources */,
 				BF1CA9B12AA7C0AC00F679CA /* SquaredImageView.swift in Sources */,
 				BF9FE0F22A9E6D64003CCB1A /* Constants.swift in Sources */,
+				BF1CA9BA2AA95B2900F679CA /* ExerciseColumnView.swift in Sources */,
+				BF1CA9B82AA90B4C00F679CA /* RoutineExerciseTableViewCell.swift in Sources */,
 				BF9FE0F82A9EE876003CCB1A /* MuscleCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

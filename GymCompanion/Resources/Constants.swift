@@ -14,6 +14,10 @@ struct K {
         enum RoutineList {
             static let tvCellId = "RoutineListTableViewCellId"
         }
+
+        enum RoutineExerciseList {
+            static let tvCellId = "RoutineExerciseListTableViewCellId"
+        }
     }
 
     enum Explore {

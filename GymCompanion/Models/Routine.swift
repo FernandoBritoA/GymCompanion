@@ -26,5 +26,6 @@ struct RoutineExercise: ExerciseDetail {
     let name: String
     let gifUrl: String
     let repetitions: Int
+    let sets: Int
     let weight: Double
 }

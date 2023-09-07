@@ -11,10 +11,17 @@ class MyRoutinesViewController: UIViewController {
     private var viewModel = ListViewModel<Routine>(renderList: [
         Routine(name: "Balance", type: .balance, exercises: [
             RoutineExercise(
-                name: "Bicep curl",
+                name: "Bicep curl lonfert, louder sir that is a scen from the office between jim and dwight very funny",
                 gifUrl: "https://api.exercisedb.io/image/tguZB-Omyct6gb",
-                repetitions: 3,
+                repetitions: 10,
+                sets: 3,
                 weight: 20),
+            RoutineExercise(
+                name: "Stetching",
+                gifUrl: "https://api.exercisedb.io/image/tguZB-Omyct6gb",
+                repetitions: 15,
+                sets: 5,
+                weight: 0),
         ]),
         Routine(name: "Core Training", type: .core, exercises: []),
         Routine(name: "Functional Training", type: .functional, exercises: []),
@@ -72,6 +79,11 @@ extension MyRoutinesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let routine = viewModel.getElement(by: indexPath)
+        let vc = RoutineExerciseTableViewController(model: routine)
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

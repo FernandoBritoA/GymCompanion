@@ -56,7 +56,7 @@ class ExerciseTableViewController: UITableViewController {
         showBottomSheet(with: exercise)
     }
 
-    private func showBottomSheet(with exercise: Exercise) {
+    private func showBottomSheet(with exercise: ExerciseDetail) {
         let vc = ExerciseDetailViewController()
         vc.configure(with: exercise)
 
