@@ -30,6 +30,12 @@ class RoutineExerciseTableViewController: UITableViewController {
         navigationItem.rightBarButtonItem = editButtonItem
         hidesBottomBarWhenPushed = true
         tableView.register(RoutineExerciseTableViewCell.self, forCellReuseIdentifier: RoutineExerciseTableViewCell.id)
+
+        let headerButton = AddNewButton(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 60), primaryAction: UIAction { _ in
+            print("Add New")
+        })
+
+        tableView.tableHeaderView = headerButton
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {

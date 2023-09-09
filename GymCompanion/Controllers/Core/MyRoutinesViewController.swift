@@ -51,6 +51,12 @@ extension MyRoutinesViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.separatorStyle = .none
         tableView.register(RoutineTableViewCell.self, forCellReuseIdentifier: RoutineTableViewCell.id)
         tableView.estimatedRowHeight = 60.0
+        
+        let headerButton = AddNewButton(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: tableView.estimatedRowHeight), primaryAction: UIAction { _ in
+            print("Add New")
+        })
+        
+        tableView.tableHeaderView = headerButton
         view.addSubview(tableView)
         tableView.frame = view.bounds
         tableView.delegate = self

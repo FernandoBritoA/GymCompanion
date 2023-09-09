@@ -23,6 +23,7 @@
 		BF1CA9B52AA908ED00F679CA /* RoutineExerciseBreakdownStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CA9B42AA908ED00F679CA /* RoutineExerciseBreakdownStackView.swift */; };
 		BF1CA9B82AA90B4C00F679CA /* RoutineExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CA9B72AA90B4C00F679CA /* RoutineExerciseTableViewCell.swift */; };
 		BF1CA9BA2AA95B2900F679CA /* ExerciseColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CA9B92AA95B2900F679CA /* ExerciseColumnView.swift */; };
+		BF1CA9BC2AACF2FE00F679CA /* AddNewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CA9BB2AACF2FE00F679CA /* AddNewButton.swift */; };
 		BF9FE0EA2A9E6641003CCB1A /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE0E92A9E6641003CCB1A /* MainTabBarViewController.swift */; };
 		BF9FE0EC2A9E682D003CCB1A /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE0EB2A9E682D003CCB1A /* ExploreViewController.swift */; };
 		BF9FE0EE2A9E6872003CCB1A /* MyRoutinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE0ED2A9E6872003CCB1A /* MyRoutinesViewController.swift */; };
@@ -79,6 +80,7 @@
 		BF1CA9B42AA908ED00F679CA /* RoutineExerciseBreakdownStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineExerciseBreakdownStackView.swift; sourceTree = "<group>"; };
 		BF1CA9B72AA90B4C00F679CA /* RoutineExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		BF1CA9B92AA95B2900F679CA /* ExerciseColumnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseColumnView.swift; sourceTree = "<group>"; };
+		BF1CA9BB2AACF2FE00F679CA /* AddNewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewButton.swift; sourceTree = "<group>"; };
 		BF9FE0E92A9E6641003CCB1A /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		BF9FE0EB2A9E682D003CCB1A /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		BF9FE0ED2A9E6872003CCB1A /* MyRoutinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRoutinesViewController.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 				BF9FE0F72A9EE876003CCB1A /* MuscleCollectionViewCell.swift */,
 				BF1CA9AE2AA7BD2600F679CA /* RoutineTableViewCell.swift */,
 				BF1CA9B02AA7C0AC00F679CA /* SquaredImageView.swift */,
+				BF1CA9BB2AACF2FE00F679CA /* AddNewButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				BF1A4BF92A9BCC9E00A921AF /* AppDelegate.swift in Sources */,
 				BF9FE0EA2A9E6641003CCB1A /* MainTabBarViewController.swift in Sources */,
 				BF1CA9AB2AA5616500F679CA /* Routine.swift in Sources */,
+				BF1CA9BC2AACF2FE00F679CA /* AddNewButton.swift in Sources */,
 				BF9FE0F02A9E6999003CCB1A /* SettingsViewController.swift in Sources */,
 				BF9FE0EC2A9E682D003CCB1A /* ExploreViewController.swift in Sources */,
 				BF9FE0EE2A9E6872003CCB1A /* MyRoutinesViewController.swift in Sources */,
