@@ -33,6 +33,17 @@ extension UIView {
     }
 }
 
+extension UITextField {
+    func withBottomBorder(color: CGColor, height: CGFloat = 1.0) {
+        let padding = 10.0
+        let bottomLine = CALayer()
+        bottomLine.frame = CGRect(x: 0, y: self.frame.size.height + padding, width: self.frame.size.width, height: height)
+        bottomLine.backgroundColor = color
+        borderStyle = .none
+        layer.addSublayer(bottomLine)
+    }
+}
+
 extension UIEdgeInsets {
     static func topInset(_ value: CGFloat) -> UIEdgeInsets {
         return UIEdgeInsets(top: value, left: 0, bottom: 0, right: 0)
