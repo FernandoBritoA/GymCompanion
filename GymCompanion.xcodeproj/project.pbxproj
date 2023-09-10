@@ -25,7 +25,8 @@
 		BF1CA9BA2AA95B2900F679CA /* ExerciseColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CA9B92AA95B2900F679CA /* ExerciseColumnView.swift */; };
 		BF1CA9BC2AACF2FE00F679CA /* AddNewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CA9BB2AACF2FE00F679CA /* AddNewButton.swift */; };
 		BF1CA9BE2AAD436D00F679CA /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CA9BD2AAD436D00F679CA /* TextInputViewController.swift */; };
-		BF1CA9C02AAD4BCE00F679CA /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CA9BF2AAD4BCE00F679CA /* CustomTextField.swift */; };
+		BF1CA9C02AAD4BCE00F679CA /* CustomInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CA9BF2AAD4BCE00F679CA /* CustomInput.swift */; };
+		BF1CA9C22AAE3F7300F679CA /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CA9C12AAE3F7300F679CA /* Toast.swift */; };
 		BF9FE0EA2A9E6641003CCB1A /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE0E92A9E6641003CCB1A /* MainTabBarViewController.swift */; };
 		BF9FE0EC2A9E682D003CCB1A /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE0EB2A9E682D003CCB1A /* ExploreViewController.swift */; };
 		BF9FE0EE2A9E6872003CCB1A /* MyRoutinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE0ED2A9E6872003CCB1A /* MyRoutinesViewController.swift */; };
@@ -84,7 +85,8 @@
 		BF1CA9B92AA95B2900F679CA /* ExerciseColumnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseColumnView.swift; sourceTree = "<group>"; };
 		BF1CA9BB2AACF2FE00F679CA /* AddNewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewButton.swift; sourceTree = "<group>"; };
 		BF1CA9BD2AAD436D00F679CA /* TextInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewController.swift; sourceTree = "<group>"; };
-		BF1CA9BF2AAD4BCE00F679CA /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		BF1CA9BF2AAD4BCE00F679CA /* CustomInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInput.swift; sourceTree = "<group>"; };
+		BF1CA9C12AAE3F7300F679CA /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		BF9FE0E92A9E6641003CCB1A /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		BF9FE0EB2A9E682D003CCB1A /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		BF9FE0ED2A9E6872003CCB1A /* MyRoutinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRoutinesViewController.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				BF9FE0F42A9E97BC003CCB1A /* Muscle.swift */,
 				BF9FE1032AA27032003CCB1A /* Exercise.swift */,
 				BF1CA9AA2AA5616500F679CA /* Routine.swift */,
+				BF1CA9C12AAE3F7300F679CA /* Toast.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -248,7 +251,7 @@
 				BF1CA9AE2AA7BD2600F679CA /* RoutineTableViewCell.swift */,
 				BF1CA9B02AA7C0AC00F679CA /* SquaredImageView.swift */,
 				BF1CA9BB2AACF2FE00F679CA /* AddNewButton.swift */,
-				BF1CA9BF2AAD4BCE00F679CA /* CustomTextField.swift */,
+				BF1CA9BF2AAD4BCE00F679CA /* CustomInput.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -463,7 +466,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF1CA9C02AAD4BCE00F679CA /* CustomTextField.swift in Sources */,
+				BF1CA9C02AAD4BCE00F679CA /* CustomInput.swift in Sources */,
 				BF9FE0F52A9E97BC003CCB1A /* Muscle.swift in Sources */,
 				BF1A4BF92A9BCC9E00A921AF /* AppDelegate.swift in Sources */,
 				BF9FE0EA2A9E6641003CCB1A /* MainTabBarViewController.swift in Sources */,
@@ -479,6 +482,7 @@
 				BF9FE1072AA272DF003CCB1A /* ApiCaller.swift in Sources */,
 				BF1CA9B32AA8E34B00F679CA /* RoutineExerciseTableViewController.swift in Sources */,
 				BF1CA9BE2AAD436D00F679CA /* TextInputViewController.swift in Sources */,
+				BF1CA9C22AAE3F7300F679CA /* Toast.swift in Sources */,
 				BF9FE1102AA4300F003CCB1A /* ExerciseDetailViewController.swift in Sources */,
 				BF1CA9B52AA908ED00F679CA /* RoutineExerciseBreakdownStackView.swift in Sources */,
 				BF9FE1042AA27032003CCB1A /* Exercise.swift in Sources */,

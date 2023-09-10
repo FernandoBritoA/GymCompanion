@@ -1,5 +1,5 @@
 //
-//  CustomTextField.swift
+//  CustomInput.swift
 //  GymCompanion
 //
 //  Created by Fernando Brito on 09/09/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomTextField: UIStackView {
+class CustomInput: UIStackView {
     let label: UILabel = {
         let lbl = UILabel()
 
@@ -31,7 +31,6 @@ class CustomTextField: UIStackView {
         super.init(frame: frame)
 
         setupStackView()
-        textField.becomeFirstResponder()
     }
 
     required init(coder: NSCoder) {

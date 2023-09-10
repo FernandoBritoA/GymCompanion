@@ -8,16 +8,16 @@
 import UIKit
 
 class TextInputViewController: UIViewController {
-    private let textField: CustomTextField = {
-        let textField = CustomTextField()
+    private let input: CustomInput = {
+        let input = CustomInput()
 
-        textField.label.text = K.MyRoutines.nameYourRoutine
-        textField.translatesAutoresizingMaskIntoConstraints = false
+        input.label.text = K.MyRoutines.nameYourRoutine
+        input.translatesAutoresizingMaskIntoConstraints = false
 
-        return textField
+        return input
     }()
 
-    private let addButton: UIButton = {
+    private let addRoutineButton: UIButton = {
         let button = UIButton()
         var config = UIButton.Configuration.filled()
 
@@ -37,10 +37,12 @@ class TextInputViewController: UIViewController {
         super.viewDidLoad()
 
         configueNavigationBar()
+        input.textField.delegate = self
+        input.textField.becomeFirstResponder()
         view.backgroundColor = .systemBackground
 
-        view.addSubview(textField)
-        view.addSubview(addButton)
+        view.addSubview(input)
+        view.addSubview(addRoutineButton)
     }
 
     override func viewDidLayoutSubviews() {
@@ -63,19 +65,35 @@ class TextInputViewController: UIViewController {
     }
 
     private func setupConstraints() {
-        let textFieldConstraints = [
-            textField.topAnchor.constraint(equalTo: view.topAnchor, constant: 200),
-            textField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Dimensions.horizontalSpacing),
-            textField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Dimensions.horizontalSpacing),
+        let inputConstraints = [
+            input.topAnchor.constraint(equalTo: view.topAnchor, constant: 200),
+            input.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Dimensions.horizontalSpacing),
+            input.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Dimensions.horizontalSpacing),
         ]
 
         let buttonConstraints = [
-            addButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            addButton.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 50),
+            addRoutineButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            addRoutineButton.topAnchor.constraint(equalTo: input.bottomAnchor, constant: 50),
         ]
 
-        NSLayoutConstraint.activate(textFieldConstraints + buttonConstraints)
+        NSLayoutConstraint.activate(inputConstraints + buttonConstraints)
     }
 }
 
-extension TextInputViewController {}
+extension TextInputViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        onSubmit(text: textField.text)
+
+        return true
+    }
+
+    private func onSubmit(text: String?) {
+        guard let name = text, name.hasValue() else {
+            showToast(message: "Invalid Text", type: .error)
+
+            return
+        }
+
+        print(name)
+    }
+}
