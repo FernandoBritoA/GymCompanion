@@ -38,9 +38,21 @@ class MyRoutinesViewController: UIViewController {
     }
 
     private func setupView() {
-        navigationItem.title = K.MyRoutines.title
         view.backgroundColor = .systemBackground
-        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        navigationItem.title = K.MyRoutines.title
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .add, target: self, action: #selector(onAddRoutine))
+        navigationItem.rightBarButtonItem?.tintColor = .label
+        
+        navigationController?.navigationBar.prefersLargeTitles = false
+    }
+    
+    @objc private func onAddRoutine() {
+        let vc = TextInputViewController()
+        let nav = UINavigationController(rootViewController: vc)
+
+        present(nav, animated: true)
     }
 }
 
@@ -51,14 +63,11 @@ extension MyRoutinesViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.separatorStyle = .none
         tableView.register(RoutineTableViewCell.self, forCellReuseIdentifier: RoutineTableViewCell.id)
         tableView.estimatedRowHeight = 60.0
-        
-        let headerButton = AddNewButton(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: tableView.estimatedRowHeight), primaryAction: UIAction { _ in
-            print("Add New")
-        })
-        
-        tableView.tableHeaderView = headerButton
+    
         view.addSubview(tableView)
         tableView.frame = view.bounds
+        tableView.contentInset = UIEdgeInsets.topInset(20)
+      
         tableView.delegate = self
         tableView.dataSource = self
     }

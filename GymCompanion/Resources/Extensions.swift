@@ -32,3 +32,9 @@ extension UIView {
         self.frame = self.frame.inset(by: insets)
     }
 }
+
+extension UIEdgeInsets {
+    static func topInset(_ value: CGFloat) -> UIEdgeInsets {
+        return UIEdgeInsets(top: value, left: 0, bottom: 0, right: 0)
+    }
+}
