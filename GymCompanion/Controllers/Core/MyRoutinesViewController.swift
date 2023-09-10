@@ -29,6 +29,16 @@ class MyRoutinesViewController: UIViewController {
         Routine(name: "Strength", type: .strength, exercises: []),
         Routine(name: "Stretching", type: .stretching, exercises: []),
     ])
+    
+    private let tableView: UITableView = {
+        let tableView = UITableView()
+        
+        tableView.separatorStyle = .none
+        tableView.register(RoutineTableViewCell.self, forCellReuseIdentifier: RoutineTableViewCell.id)
+        tableView.estimatedRowHeight = 60.0
+        
+        return tableView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,23 +57,10 @@ class MyRoutinesViewController: UIViewController {
         
         navigationController?.navigationBar.prefersLargeTitles = false
     }
-    
-    @objc private func onAddRoutine() {
-        let vc = TextInputViewController()
-        let nav = UINavigationController(rootViewController: vc)
-
-        present(nav, animated: true)
-    }
 }
 
 extension MyRoutinesViewController: UITableViewDelegate, UITableViewDataSource {
     private func setupTableView() {
-        let tableView = UITableView()
-        
-        tableView.separatorStyle = .none
-        tableView.register(RoutineTableViewCell.self, forCellReuseIdentifier: RoutineTableViewCell.id)
-        tableView.estimatedRowHeight = 60.0
-    
         view.addSubview(tableView)
         tableView.frame = view.bounds
         tableView.contentInset = UIEdgeInsets.topInset(20)
@@ -108,5 +105,21 @@ extension MyRoutinesViewController: UITableViewDelegate, UITableViewDataSource {
             viewModel.removeElement(by: indexPath)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
+    }
+}
+
+extension MyRoutinesViewController: TextInputViewControllerDelegate {
+    @objc private func onAddRoutine() {
+        let vc = TextInputViewController()
+        vc.delegete = self
+        let nav = UINavigationController(rootViewController: vc)
+
+        present(nav, animated: true)
+    }
+    
+    func textInputDidSubmit(_ viewModel: TextInputViewController, routine: Routine) {
+        self.viewModel.addElements([routine])
+        
+        tableView.reloadData()
     }
 }

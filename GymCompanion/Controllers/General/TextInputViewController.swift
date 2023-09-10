@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol TextInputViewControllerDelegate: AnyObject {
+    func textInputDidSubmit(_ viewModel: TextInputViewController, routine: Routine)
+}
+
 class TextInputViewController: UIViewController {
+    public weak var delegete: TextInputViewControllerDelegate?
+
     private let input: CustomInput = {
         let input = CustomInput()
 
@@ -92,13 +98,13 @@ extension TextInputViewController: UITextFieldDelegate {
     }
 
     private func onSubmit() {
-        guard let text = input.textField.text, text.hasValue() else {
+        guard let routineName = input.textField.text, routineName.hasValue() else {
             showToast(message: "Invalid Text", type: .error)
 
             return
         }
 
-        print(text)
+        delegete?.textInputDidSubmit(self, routine: Routine(name: routineName, type: .strength, exercises: []))
         onClose()
     }
 }
