@@ -10,6 +10,8 @@ import UIKit
 struct K {
     enum MyRoutines {
         static let title = "My Routines"
+        static let nameYourRoutine = "Name your routine"
+        static let addRoutine = "Add Routine"
 
         enum RoutineList {
             static let tvCellId = "RoutineListTableViewCellId"
