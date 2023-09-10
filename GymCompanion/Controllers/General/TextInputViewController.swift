@@ -41,6 +41,10 @@ class TextInputViewController: UIViewController {
         input.textField.becomeFirstResponder()
         view.backgroundColor = .systemBackground
 
+        addRoutineButton.addAction(UIAction(handler: { [weak self] _ in
+            self?.onSubmit()
+        }), for: .touchUpInside)
+
         view.addSubview(input)
         view.addSubview(addRoutineButton)
     }
@@ -82,18 +86,19 @@ class TextInputViewController: UIViewController {
 
 extension TextInputViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        onSubmit(text: textField.text)
+        onSubmit()
 
         return true
     }
 
-    private func onSubmit(text: String?) {
-        guard let name = text, name.hasValue() else {
+    private func onSubmit() {
+        guard let text = input.textField.text, text.hasValue() else {
             showToast(message: "Invalid Text", type: .error)
 
             return
         }
 
-        print(name)
+        print(text)
+        onClose()
     }
 }
