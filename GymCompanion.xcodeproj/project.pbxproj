@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF01F9702AAEA60D0040776B /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF01F96F2AAEA60D0040776B /* DropDown.swift */; };
 		BF1A4BF92A9BCC9E00A921AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A4BF82A9BCC9E00A921AF /* AppDelegate.swift */; };
 		BF1A4BFB2A9BCC9E00A921AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A4BFA2A9BCC9E00A921AF /* SceneDelegate.swift */; };
 		BF1A4C032A9BCC9E00A921AF /* GymCompanion.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF1A4C012A9BCC9E00A921AF /* GymCompanion.xcdatamodeld */; };
@@ -39,6 +40,8 @@
 		BF9FE1072AA272DF003CCB1A /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE1062AA272DF003CCB1A /* ApiCaller.swift */; };
 		BF9FE10A2AA2797D003CCB1A /* ExerciseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE1092AA2797D003CCB1A /* ExerciseTableViewController.swift */; };
 		BF9FE1102AA4300F003CCB1A /* ExerciseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE10F2AA4300F003CCB1A /* ExerciseDetailViewController.swift */; };
+		BFE2E0F72AAEA7B600400067 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE2E0F62AAEA7B600400067 /* ViewModel.swift */; };
+		BFE2E0F92AAEA8C700400067 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE2E0F82AAEA8C700400067 /* Model.swift */; };
 		F71C4E6BFF1E3C513CDF007A /* Pods_GymCompanion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67AA2E0BB899CB608B7E5379 /* Pods_GymCompanion.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +66,7 @@
 		3BDBBC254DFBCF88F8A28917 /* Pods-GymCompanion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymCompanion.debug.xcconfig"; path = "Target Support Files/Pods-GymCompanion/Pods-GymCompanion.debug.xcconfig"; sourceTree = "<group>"; };
 		5901355E5EEE04D932701688 /* Pods-GymCompanion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymCompanion.release.xcconfig"; path = "Target Support Files/Pods-GymCompanion/Pods-GymCompanion.release.xcconfig"; sourceTree = "<group>"; };
 		67AA2E0BB899CB608B7E5379 /* Pods_GymCompanion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymCompanion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF01F96F2AAEA60D0040776B /* DropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
 		BF1A4BF52A9BCC9E00A921AF /* GymCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF1A4BF82A9BCC9E00A921AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF1A4BFA2A9BCC9E00A921AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 		BF9FE1062AA272DF003CCB1A /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
 		BF9FE1092AA2797D003CCB1A /* ExerciseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewController.swift; sourceTree = "<group>"; };
 		BF9FE10F2AA4300F003CCB1A /* ExerciseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailViewController.swift; sourceTree = "<group>"; };
+		BFE2E0F62AAEA7B600400067 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		BFE2E0F82AAEA8C700400067 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +139,16 @@
 				67AA2E0BB899CB608B7E5379 /* Pods_GymCompanion.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF01F96E2AAEA4EE0040776B /* DropDown */ = {
+			isa = PBXGroup;
+			children = (
+				BF01F96F2AAEA60D0040776B /* DropDown.swift */,
+				BFE2E0F62AAEA7B600400067 /* ViewModel.swift */,
+				BFE2E0F82AAEA8C700400067 /* Model.swift */,
+			);
+			path = DropDown;
 			sourceTree = "<group>";
 		};
 		BF1A4BEC2A9BCC9E00A921AF = {
@@ -246,6 +262,7 @@
 		BF9FE0F62A9EE850003CCB1A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BF01F96E2AAEA4EE0040776B /* DropDown */,
 				BF1CA9B62AA90B0900F679CA /* RoutineExerciseTableViewCell */,
 				BF9FE0F72A9EE876003CCB1A /* MuscleCollectionViewCell.swift */,
 				BF1CA9AE2AA7BD2600F679CA /* RoutineTableViewCell.swift */,
@@ -471,6 +488,7 @@
 				BF1A4BF92A9BCC9E00A921AF /* AppDelegate.swift in Sources */,
 				BF9FE0EA2A9E6641003CCB1A /* MainTabBarViewController.swift in Sources */,
 				BF1CA9AB2AA5616500F679CA /* Routine.swift in Sources */,
+				BFE2E0F72AAEA7B600400067 /* ViewModel.swift in Sources */,
 				BF1CA9BC2AACF2FE00F679CA /* AddNewButton.swift in Sources */,
 				BF9FE0F02A9E6999003CCB1A /* SettingsViewController.swift in Sources */,
 				BF9FE0EC2A9E682D003CCB1A /* ExploreViewController.swift in Sources */,
@@ -480,6 +498,7 @@
 				BF9FE10A2AA2797D003CCB1A /* ExerciseTableViewController.swift in Sources */,
 				BF1CA9AF2AA7BD2600F679CA /* RoutineTableViewCell.swift in Sources */,
 				BF9FE1072AA272DF003CCB1A /* ApiCaller.swift in Sources */,
+				BFE2E0F92AAEA8C700400067 /* Model.swift in Sources */,
 				BF1CA9B32AA8E34B00F679CA /* RoutineExerciseTableViewController.swift in Sources */,
 				BF1CA9BE2AAD436D00F679CA /* TextInputViewController.swift in Sources */,
 				BF1CA9C22AAE3F7300F679CA /* Toast.swift in Sources */,
@@ -492,6 +511,7 @@
 				BF9FE0F22A9E6D64003CCB1A /* Constants.swift in Sources */,
 				BF1CA9BA2AA95B2900F679CA /* ExerciseColumnView.swift in Sources */,
 				BF1CA9B82AA90B4C00F679CA /* RoutineExerciseTableViewCell.swift in Sources */,
+				BF01F9702AAEA60D0040776B /* DropDown.swift in Sources */,
 				BF9FE0F82A9EE876003CCB1A /* MuscleCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

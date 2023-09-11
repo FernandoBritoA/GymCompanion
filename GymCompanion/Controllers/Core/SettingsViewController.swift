@@ -12,5 +12,9 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .systemBackground
+        let dropdown = DropDown(model: DropDownModel(
+            data: ["Banana", "Apple", "Kiwi"],
+            placeholder: "Select a Fruit"))
+        view.addSubview(dropdown)
     }
 }
