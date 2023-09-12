@@ -105,6 +105,8 @@
 		BF9FE10F2AA4300F003CCB1A /* ExerciseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailViewController.swift; sourceTree = "<group>"; };
 		BFE2E0F62AAEA7B600400067 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		BFE2E0F82AAEA8C700400067 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		BFE2E13F2AB0084E00400067 /* gym-companion-demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "gym-companion-demo.gif"; sourceTree = "<group>"; };
+		BFE2E1402AB0085900400067 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,8 @@
 		BF1A4BEC2A9BCC9E00A921AF = {
 			isa = PBXGroup;
 			children = (
+				BFE2E1402AB0085900400067 /* README.md */,
+				BFE2E13F2AB0084E00400067 /* gym-companion-demo.gif */,
 				BF1A4BF72A9BCC9E00A921AF /* GymCompanion */,
 				BF1A4C112A9BCC9F00A921AF /* GymCompanionTests */,
 				BF1A4C1B2A9BCC9F00A921AF /* GymCompanionUITests */,
